@@ -1,2 +1,2 @@
 # Final-project
-Reviews website for exploring a new cities and places
+Reviews website for exploring new cities and places
