@@ -1,14 +1,16 @@
-import React                            from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom'
 import './App.css';
-import Users                            from './user/pages/Users'  
+import React                                       from 'react';
+import {BrowserRouter as Router, Route , Redirect} from 'react-router-dom'
+import Users                                       from './user/pages/Users'  
 
 const App = () => {
   return (
     <>
     <Router>
-      <Route path="/"></Route>
+      <Route path="/" exact>
         <Users/>
+      </Route>
+      <Redirect to="/" />
     </Router>
     </>
     
