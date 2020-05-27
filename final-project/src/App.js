@@ -1,11 +1,12 @@
-import React from 'react';
+import React                     from 'react';
+import {BrowserRouter as Router} from 'react-router-dom'
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <>
-    <h1>let's star</h1>
-    </>
+    <Router>
+    
+    </Router>
   );
 }
 
