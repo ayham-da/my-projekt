@@ -33,31 +33,3 @@ const UserItem = props =>{
 export default UserItem;
 
 
-
-
-/* 
-
-import React                     from 'react';
-import                                'bootstrap/dist/css/bootstrap.min.css'
-import                                './UserItems.css'
-
-import {Container, Row, Col, Card, Badge, Button }    from 'react-bootstrap'
-
-const UserItem = props =>{
-    return (
-        <>
-        <li>
-            <Card className="h-100 shadow-sm bg-white rounded">
-                
-                <Card.Img variant="top" src={props.image} alt={props.name}/>
-                <Card.Body className="d-flex flex-column">
-                    <h2>{props.name}</h2>
-                    <h3>{props.placeCount} {props.placeCount === 1 ? 'Place' : 'Places'}</h3>
-                    </Card.Body>
-            </Card>
-        </li>
-        </>
-    );
-};
-
-export default UserItem; */
