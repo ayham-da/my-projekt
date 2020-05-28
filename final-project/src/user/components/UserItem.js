@@ -1,4 +1,5 @@
 import React                     from 'react';
+import Avatar                    from '../../shared/components/UIElements/Avatar'
 
 const UserItem = props =>{
     return (
@@ -6,7 +7,7 @@ const UserItem = props =>{
         <li>
             <div>
                 <div>
-                    <img src={props.image} alt={props.name}/>
+                    <Avatar image={props.image} alt={props.name} />
                 </div>
                 <div>
                     <h2>{props.name}</h2>
