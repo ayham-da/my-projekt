@@ -10,13 +10,12 @@ const UsersList = props =>{
          </div>
          </>
          );
-     }
+     }else{
      return(
          <>
          <ul>
              {props.items.map(user =>{
-                 return
-                 <>
+                 return(<>
                  <UserItem 
                  key={user.id} 
                  id={user.id} 
@@ -24,12 +23,15 @@ const UsersList = props =>{
                  name={user.name} 
                  placeCount={user.places} />
                  </>
+                 )
+                 
              })}
          </ul>
          </>
      )
+    }
     
 };
 
 
-export default UsersList;
+export default UsersList
