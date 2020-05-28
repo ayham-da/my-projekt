@@ -1,4 +1,4 @@
-.user-item {
+/* .user-item {
     margin: 1rem;
     width: calc(45% - 2rem);
     min-width: 17.5rem;
@@ -46,4 +46,22 @@
   
   .user-item__info h3 {
     margin: 0;
-  }
+  } */
+
+.card{
+  background-color: #333333;
+}
+
+.title{
+  margin-left: 1rem;
+  color: white;
+}
+
+.user-item__image {
+  color: #333333;
+  background-color: #333333;
+  width: 7rem;
+  height: 7rem;
+  margin-left: 5.5rem;
+  margin-top: 2rem;
+}
