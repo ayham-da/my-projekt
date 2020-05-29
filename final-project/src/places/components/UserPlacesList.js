@@ -1,10 +1,53 @@
 import React                     from 'react';
 
 
+import PlaceItem from './PlaceItem'
+
+import {Card,Button}             from 'react-bootstrap'
+import                                'bootstrap/dist/css/bootstrap.min.css';
 import './UserplacesList.css'
 
 
 const UserplacesList = props => {
-    return <h2>UserplacesList works!</h2>
+    if (props.items.length === 0){
+        return ( 
+        <>
+        <div className="center">
+        <Card>
+        <Card.Body>
+           <Card.Text>
+               {<h2>No Places found!! , Maybe Create One!</h2>}
+           </Card.Text>
+           <Button>share Place</Button>
+           </Card.Body>
+            
+       </Card>
+        </div>
+        </>
+        );
+    }else{
+        return(
+            <>
+            <ul className="places-list">
+                {props.items.map(place =>{
+                    return(<>
+                    <PlaceItem 
+                        key={place.id} 
+                        id={place.id} 
+                        image={place.imageUrl} 
+                        title={place.title} 
+                        description={place.description} 
+                        addrees={place.addrees}
+                        creatorId={place.creator}
+                        coordinats={place.location}
+                    />
+                    </>
+                    )
+                    
+                })}
+            </ul>
+            </>
+        )
+       }
 };
 export default UserplacesList;
