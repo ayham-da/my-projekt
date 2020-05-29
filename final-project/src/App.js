@@ -9,9 +9,9 @@ const App = () => {
   return (
     <>
     <Router>
+    <MainHeader/>
       <Switch>
         <Route path="/" exact>
-          <MainHeader/>
           <Users/>
         </Route>
 

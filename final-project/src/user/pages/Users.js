@@ -14,21 +14,21 @@ const Users = () => {
          postTime: 3
      },
      {
-        id: 'user1' , 
+        id: 'user2' , 
         name: 'Ayham' , 
         image: Image , 
         places: 3,
         postTime: 3
     },
     {
-        id: 'user1' , 
+        id: 'user3' , 
         name: 'Ayham' , 
         image: Image , 
         places: 3,
         postTime: 3
     },
     {
-        id: 'user1' , 
+        id: 'user4' , 
         name: 'Ayham' , 
         image: Image , 
         places: 3,

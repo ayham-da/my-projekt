@@ -1,7 +1,7 @@
 
 import React                     from 'react';
 import { Link }                  from 'react-router-dom'
-import {Card, Button }           from 'react-bootstrap'
+import {Card, Button,Nav }           from 'react-bootstrap'
 import                                'bootstrap/dist/css/bootstrap.min.css';
 
 import Avatar                    from '../../shared/components/UIElements/Avatar'
@@ -25,7 +25,11 @@ const UserItem = props =>{
             </Card.Text>
             </Card.Body> 
             
-            <Button calssName="mb-2" size="lg" variant="secondary"><Link to={`/${props.id}/places`}>{props.placeCount} {props.placeCount === 1 ? 'Place' : 'Places'}</Link> </Button>
+            <Button calssName="mb-2 text-muted "  size="lg" variant="secondary">
+                <Nav.Link  to={`/${props.id}/places`}>
+                    {props.placeCount} {props.placeCount === 1 ? 'Place' : 'Places'}
+                </Nav.Link> 
+            </Button>
             
             <Card.Footer>
             <small className="text-muted">{props.postTime} {props.postTime === 1 ? 'Min ago' :'Mins ago' }</small> {/* we can add a date and then set a counter maybe?! */}
