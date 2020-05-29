@@ -1,12 +1,13 @@
+import                                'bootstrap/dist/css/bootstrap.min.css';
+import './UserItem.css'
+
 import React                     from 'react';
 import { Link }                  from 'react-router-dom'
+import {Container, Row, Col, Card, Badge, Button }    from 'react-bootstrap'
 
 import Avatar                    from '../../shared/components/UIElements/Avatar'
 
 
-import                                'bootstrap/dist/css/bootstrap.min.css'
-import './UserItem.css'
-import {Container, Row, Col, Card, Badge, Button }    from 'react-bootstrap'
 
 const UserItem = props =>{
     return (
