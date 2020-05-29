@@ -1,5 +1,7 @@
 import React                     from 'react';
 import UserItem                  from './UserItem'
+import {Container, Row, Col, Card, Badge, Button }    from 'react-bootstrap'
+import                                'bootstrap/dist/css/bootstrap.min.css';
 import './UsersList.css'
 
 
@@ -8,7 +10,14 @@ const UsersList = props =>{
          return ( 
          <>
          <div className="center">
-             <h2>No Users found!!</h2>
+         <Card>
+         <Card.Body>
+            <Card.Text>
+                {<h2>No Users found!!</h2>}
+            </Card.Text>
+            </Card.Body>
+             
+        </Card>
          </div>
          </>
          );
