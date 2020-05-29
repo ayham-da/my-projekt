@@ -20,8 +20,8 @@ const MainHeader = props => {
           <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/places/new">new places</Nav.Link>
-            <Nav.Link href="/All places">All places</Nav.Link>
-            <Nav.Link href="/All Users">All Users</Nav.Link>
+            <Nav.Link href="/All-places">All places</Nav.Link>
+            <Nav.Link href="/All-Users">All Users</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
