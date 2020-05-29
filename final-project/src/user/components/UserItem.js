@@ -23,7 +23,7 @@ const UserItem = props =>{
     </Card.Body>
     <Button calssName="mb-2" size="lg" variant="secondary">{props.placeCount} {props.placeCount === 1 ? 'Place' : 'Places'}</Button>
     <Card.Footer>
-      <small className="text-muted">{props.postTime} {props.postTime === 1 ? 'Min' :'Mins' }</small> {/* we can add a date and then set a counter maybe?! */}
+      <small className="text-muted">{props.postTime} {props.postTime === 1 ? 'Min ago' :'Mins ago' }</small> {/* we can add a date and then set a counter maybe?! */}
     </Card.Footer>
   </Card>
         </li>
