@@ -12,7 +12,28 @@ const Users = () => {
          image: Image , 
          places: 3,
          postTime: 3
-     }
+     },
+     {
+        id: 'user1' , 
+        name: 'Ayham' , 
+        image: Image , 
+        places: 3,
+        postTime: 3
+    },
+    {
+        id: 'user1' , 
+        name: 'Ayham' , 
+        image: Image , 
+        places: 3,
+        postTime: 3
+    },
+    {
+        id: 'user1' , 
+        name: 'Ayham' , 
+        image: Image , 
+        places: 3,
+        postTime: 3
+    }
     ];
      return (
         <>

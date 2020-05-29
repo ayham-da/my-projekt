@@ -50,6 +50,7 @@
 
 .card{
   background-color: #333333;
+  
 }
 
 .title{
@@ -62,6 +63,7 @@
   background-color: #333333;
   width: 7rem;
   height: 7rem;
-  margin-left: 5.5rem;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 2rem;
 }
