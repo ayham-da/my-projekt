@@ -1,9 +1,13 @@
 import React                     from 'react';
 
-
+import UserPlacesList            from '../components/UserPlacesList'
 import './UserPlaces.css'
 
 const UserPlaces = () => {
-    return <h2>UserPlaces works!</h2>
+    return (
+    <>
+    <UserPlacesList/>
+    </>
+    );
 };
 export default UserPlaces;
