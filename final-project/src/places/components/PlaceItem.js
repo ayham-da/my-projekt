@@ -11,7 +11,7 @@ const PlaceItem = props => {
     return(
         <>
      <li className="place-item">
-    <Card className="place-item__content">
+    <div className="place-item__content">
       <div className="place-item__image">
         <img src={props.image} alt={props.title} />
       </div>
@@ -21,15 +21,11 @@ const PlaceItem = props => {
         <p>{props.description}</p>
       </div>
       <div className="place-item__actions">
-        <Button >
-          VIEW ON MAP
-        </Button>
+        <Button >VIEW ON MAP</Button>
         <Button to={`/places/${props.id}`}>EDIT</Button>
-        <Button danger onClick={showDeleteWarningHandler}>
-            DELETE
-        </Button>
+        <Button >DELETE</Button>
       </div>
-    </Card>
+    </div>
   </li>
   </>
   )
