@@ -7,28 +7,28 @@ import Image                     from '../../images/ayham-home.jpeg'
 const Users = () => {
      const USERS = [
     {
-         id: 'user1' , 
+         id: 'u1' , 
          name: 'Ayham' , 
          image: Image , 
          places: 3,
          postTime: 3
      },
      {
-        id: 'user2' , 
+        id: 'u2' , 
         name: 'Ayham' , 
         image: Image , 
         places: 3,
         postTime: 3
     },
     {
-        id: 'user3' , 
+        id: 'u3' , 
         name: 'Ayham' , 
         image: Image , 
         places: 3,
         postTime: 3
     },
     {
-        id: 'user4' , 
+        id: 'u4' , 
         name: 'Ayham' , 
         image: Image , 
         places: 3,

@@ -26,9 +26,9 @@ const UserItem = props =>{
             </Card.Body> 
             
             <Button calssName="mb-2 text-muted "  size="lg" variant="secondary">
-                <Nav.Link  to={`/${props.id}/places`}>
+                <Link  to={`/${props.id}/places`}>
                     {props.placeCount} {props.placeCount === 1 ? 'Place' : 'Places'}
-                </Nav.Link> 
+                </Link> 
             </Button>
             
             <Card.Footer>

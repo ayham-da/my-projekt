@@ -1,11 +1,12 @@
 import React                     from 'react';
+import { Link }                  from 'react-router-dom'
 
 
 import PlaceItem from './PlaceItem'
 
 import {Card,Button}             from 'react-bootstrap'
 import                                'bootstrap/dist/css/bootstrap.min.css';
-import './UserplacesList.css'
+import './UserPlacesList.css'
 
 
 const UserplacesList = props => {
@@ -18,7 +19,10 @@ const UserplacesList = props => {
            <Card.Text>
                {<h2>No Places found!! , Maybe Create One!</h2>}
            </Card.Text>
-           <Button>share Place</Button>
+           <Link  to={`/places/new`}>
+                <Button >share Place</Button>
+           </Link>
+           
            </Card.Body>
             
        </Card>
