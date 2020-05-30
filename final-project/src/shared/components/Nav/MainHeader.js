@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link }                  from 'react-router-dom'
+
 
 import Logo         from '../../../images/logo192.png'
 
@@ -20,7 +22,7 @@ const MainHeader = props => {
           <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto ">
             <Nav.Link className="text-light" href="/places/new">Add places</Nav.Link>
-            <Nav.Link className="text-light" href="/user1/places">My places</Nav.Link>
+            <Nav.Link className="text-light" href={`/u1/places`}>My places</Nav.Link>
             <Nav.Link className="text-light" href="/All-places">All places</Nav.Link>
             <Nav.Link className="text-light" href="/All-Users">All Users</Nav.Link>
             <NavDropdown className="text-light" title="More" id="basic-nav-dropdown" >
