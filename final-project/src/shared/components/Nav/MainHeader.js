@@ -27,8 +27,8 @@ const MainHeader = props => {
             <Nav.Link className="text-light" href="/All-Users">All Users</Nav.Link>
             <NavDropdown className="text-light" title="More" id="basic-nav-dropdown" >
               <NavDropdown.Item className="bg-dark text-light" href="/auth">Authenticate</NavDropdown.Item>
-              <NavDropdown.Item className="bg-dark text-light" href="#action/3.2">Another action</NavDropdown.Item>
-              <NavDropdown.Item className="bg-dark text-light" href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item className="bg-dark text-light" href="#action/3.2">About us</NavDropdown.Item>
+              <NavDropdown.Item className="bg-dark text-light" href="#action/3.3">Contact</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item className="bg-dark text-light" href="#action/3.4">Separated link</NavDropdown.Item>
             </NavDropdown>
