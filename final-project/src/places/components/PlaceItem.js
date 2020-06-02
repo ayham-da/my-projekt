@@ -1,7 +1,9 @@
 import React , {useState}            from 'react';
 
-import { Link }                      from 'react-router-dom'
 import Modal                         from 'react-bootstrap/Modal'
+import Map from '../../shared/components/UIElements/Map';
+
+import { Link }                      from 'react-router-dom'
 import {Card, Button,Nav }           from 'react-bootstrap'
 import                                    'bootstrap/dist/css/bootstrap.min.css';
 
@@ -38,9 +40,9 @@ const PlaceItem = props => {
           </Modal.Header>
 
           <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-          
+
           <div className="map-container">
-          <h2>The Map</h2>
+            <Map center={props.coordinates} zoom={16}/>
           </div>
 
           <Modal.Footer>
