@@ -11,7 +11,7 @@ const PlaceItem = props => {
     return(
         <>
      <li className="place-item">
-    <div className="place-item__content">
+      <div className="place-item__content">
       <div className="place-item__image">
         <img src={props.image} alt={props.title} />
       </div>
