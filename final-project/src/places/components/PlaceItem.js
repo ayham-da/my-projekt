@@ -36,13 +36,19 @@ const PlaceItem = props => {
           <Modal.Header closeButton>
             <Modal.Title>Modal heading</Modal.Title>
           </Modal.Header>
+
           <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+          
+          <div className="map-container">
+          <h2>The Map</h2>
+          </div>
+
           <Modal.Footer>
             <Button variant="secondary" onClick={closeMapHandler}>
               Close
             </Button>
             <Button variant="primary" onClick={closeMapHandler}>
-              Save Changes
+              Open in Google Map
             </Button>
           </Modal.Footer>
         </Modal>
