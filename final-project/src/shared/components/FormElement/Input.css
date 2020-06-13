@@ -1,9 +1,12 @@
-.form-control {
-    margin: 1rem 0;
+
+  
+  
+   Form.Control:focus,
+   Form.Control:focus{
+    outline: none;
+    background: #ebebeb ;
+    border-color: #6f7700 !important;
   }
-  
-  
-  
   
   .form-control--invalid label,
   .form-control--invalid p {

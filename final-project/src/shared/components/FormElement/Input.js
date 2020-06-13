@@ -55,7 +55,7 @@ const Input = props => {
 
   const element =
     props.element === 'input' ? (
-        <Form.Control className='form-control'
+        <Form.Control 
         id={props.id}
         type={props.type}
         placeholder={props.placeholder}
@@ -64,7 +64,7 @@ const Input = props => {
         value={inputState.value}
       />
     ) : (
-        <Form.Control  className='form-control'
+        <Form.Control  
         as="textarea"
         id={props.id}
         rows={props.rows || 3}
@@ -81,7 +81,7 @@ const Input = props => {
             {props.label}
       </Form.Label>
       <div className={`${!inputState.isValid && inputState.isTouched &&
-          'form-control--invalid'}`}>
+          'form-contrdsol--invalid'}`}>
       {element}
       {!inputState.isValid && inputState.isTouched && <p>{props.errorText}</p>}
       </div>
