@@ -55,7 +55,7 @@ const Input = props => {
 
   const element =
     props.element === 'input' ? (
-        <Form.Control
+        <Form.Control className='form-control'
         id={props.id}
         type={props.type}
         placeholder={props.placeholder}
@@ -64,7 +64,7 @@ const Input = props => {
         value={inputState.value}
       />
     ) : (
-        <Form.Control 
+        <Form.Control  className='form-control'
         as="textarea"
         id={props.id}
         rows={props.rows || 3}

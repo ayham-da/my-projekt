@@ -71,10 +71,11 @@ const NewPlace = () => {
                         errorText="Please enter a valid address."
                         onInput={inputHandler}
                     />
-                    <br />
+
                     <Form.File
+                        text="light"
                         id="exampleFormControlFile1"
-                        label="Example file input" 
+                        label="Add photo" 
                     />
                     <br />
                     <Button type="submit" disabled={!formState.isValid}>
