@@ -3,7 +3,7 @@ import React , {useState}            from 'react';
 import Modal                         from 'react-bootstrap/Modal'
 import Map from '../../shared/components/UIElements/Map';
 
-// import { Link }                      from 'react-router-dom'
+import { Link }                      from 'react-router-dom';
 import { Button }           from 'react-bootstrap'
 import                                    'bootstrap/dist/css/bootstrap.min.css';
 
@@ -31,7 +31,9 @@ const PlaceItem = props => {
         </div>
         <div className="place-item__actions">
           <Button variant="primary" onClick={openMapHandler}>VIEW ON MAP</Button>
-          <Button to={`/places/${props.id}`}>EDIT</Button>
+          <Link to={`/places/${props.id}`}>
+          <Button >EDIT</Button>
+          </Link>
           <Button >DELETE</Button>
 
         <Modal show={showMap} onHide={closeMapHandler}>
