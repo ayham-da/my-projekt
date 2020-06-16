@@ -10,8 +10,8 @@ import {
 
 
 import Form                     from 'react-bootstrap/Form'
+import {Card,Button}             from 'react-bootstrap'
 // import Col from 'react-bootstrap/Col'
-import Button                   from 'react-bootstrap/Button'
 import Image                    from '../../images/düsseldorf.jpeg'
 
 import './PlaceForm.css'
@@ -92,17 +92,29 @@ const Fake_PLACES = [
   
     if (!identifiedPlace) {
       return (
-        <div >
-            <h2>Could not find place!</h2>
+        <div className="center">
+        <Card text='light'>
+            <Card.Body>
+                <Card.Text>
+                    {<h2>Could not find place!</h2>}
+                </Card.Text>
+            </Card.Body>
+        </Card>
         </div>
       );
     }
   
      if (isLoading) {
        return (
-        <div>
-           <h2>Loading...</h2>
-         </div>
+        <div className="center">
+        <Card text='light'>
+            <Card.Body>
+                <Card.Text>
+                    {<h2>Loading...</h2>}
+                </Card.Text>
+            </Card.Body>
+        </Card>
+        </div>
        );
      }
   

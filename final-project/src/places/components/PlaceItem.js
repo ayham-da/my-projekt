@@ -1,10 +1,10 @@
 import React , {useState}            from 'react';
 
 import Modal                         from 'react-bootstrap/Modal'
-import Map from '../../shared/components/UIElements/Map';
+import Map                           from '../../shared/components/UIElements/Map';
 
 import { Link }                      from 'react-router-dom';
-import { Button }           from 'react-bootstrap'
+import {Card,Button}                 from 'react-bootstrap'
 import                                    'bootstrap/dist/css/bootstrap.min.css';
 
 import                                    './PlaceItem.css'
@@ -20,44 +20,47 @@ const PlaceItem = props => {
     return(
     <React.Fragment>
       <li className="place-item">
-        <div className="place-item__content">
-        <div className="place-item__image">
-          <img src={props.image} alt={props.title} />
-        </div>
-        <div className="place-item__info">
-          <h2>{props.title}</h2>
-          <h3>{props.address}</h3>
-          <p>{props.description}</p>
-        </div>
-        <div className="place-item__actions">
-          <Button variant="primary" onClick={openMapHandler}>VIEW ON MAP</Button>
-          <Link to={`/places/${props.id}`}>
-          <Button >EDIT</Button>
-          </Link>
-          <Button >DELETE</Button>
+        <Card className="place-item__content" text="light">
+          <Card.Img className="place-item__image" variant="top" src={props.image} alt={props.title} />
+          <Card.Body >
+            <Card.Text className="place-item__info">
+              <h2>{props.title}</h2>
+              <h3>{props.address}</h3>
+              <p>{props.description}</p>
+            </Card.Text>
+          </Card.Body>
+          <div className="place-item__actions">
+            <Button variant="success" onClick={openMapHandler}>VIEW ON MAP</Button>
+            <Link to={`/places/${props.id}`}>
+            <Button variant="info">EDIT</Button>
+            </Link>
+            <Button variant="danger">DELETE</Button>
+            
+          <Modal show={showMap}  onHide={closeMapHandler}>
+            <Modal.Header className="modal-header"  closeButton>
+              <Modal.Title>{props.title}</Modal.Title>
+            </Modal.Header>
+            
+            <Modal.Body className="modal-body">
+              <p>{props.address}</p>
+              <p>Lat : {props.lat} , Lng : {props.lng}</p>
+            </Modal.Body>
 
-        <Modal show={showMap} onHide={closeMapHandler}>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
-          </Modal.Header>
+            <div className="map-container">
+              <Map center={props.coordinates} zoom={16}/>
+            </div>
 
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-
-          <div className="map-container">
-            <Map center={props.coordinates} zoom={16}/>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={closeMapHandler}>
+                Close
+              </Button>
+              <Button variant="success" onClick={closeMapHandler}>
+                Open in Google Map
+              </Button>
+            </Modal.Footer>
+          </Modal>
           </div>
-
-          <Modal.Footer>
-            <Button variant="secondary" onClick={closeMapHandler}>
-              Close
-            </Button>
-            <Button variant="primary" onClick={closeMapHandler}>
-              Open in Google Map
-            </Button>
-          </Modal.Footer>
-        </Modal>
-        </div>
-      </div>
+        </Card>
     </li>
   </React.Fragment>
   )

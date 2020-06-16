@@ -14,9 +14,9 @@ const UserplacesList = props => {
         return ( 
         <>
         <div className="center">
-        <Card>
+        <Card text="light">
         <Card.Body>
-           <Card.Text>
+           <Card.Text >
                {<h2>No Places found!! , Maybe Create One!</h2>}
            </Card.Text>
            <Link  to={`/places/new`}>
@@ -41,9 +41,11 @@ const UserplacesList = props => {
                         image={place.imageUrl} 
                         title={place.title} 
                         description={place.description} 
-                        addrees={place.addrees}
+                        address={place.address}
                         creatorId={place.creator}
                         coordinats={place.location}
+                        lat={place.location.lat}
+                        lng={place.location.lng}
                     />
                     </>
                     )
