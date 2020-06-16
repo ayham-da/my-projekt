@@ -12,6 +12,9 @@ import Form from 'react-bootstrap/Form'
 // import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 
+import './PlaceForm.css'
+
+
 
 
 const Fake_PLACES = [
@@ -54,7 +57,7 @@ const UpdatePlace = () => {
     }
 
     return (
-        <Form>
+        <Form className="place-form">
             <Input
                 id="title"
                 element="input"

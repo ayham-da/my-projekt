@@ -1,19 +1,22 @@
 import React                   from 'react';
+import { useForm }             from '../../shared/hooks/FormHook';
 
-import Input from '../../shared/components/FormElement/Input';
+
+
+import Input                   from '../../shared/components/FormElement/Input';
 import {
     VALIDATOR_REQUIRE,
     VALIDATOR_MINLENGTH
-  } from '../../shared/util/validators';
-  import { useForm } from '../../shared/hooks/FormHook';
+  }                            from '../../shared/util/validators';
+  
 
-import Form from 'react-bootstrap/Form'
-// import Col from 'react-bootstrap/Col'
-import Button from 'react-bootstrap/Button'
+import Form                    from 'react-bootstrap/Form'
+// import Col                  from 'react-bootstrap/Col'
+import Button                  from 'react-bootstrap/Button'
 
 
 
-import './NewPlace.css'
+import './PlaceForm.css'
 
 
 const NewPlace = () => {
