@@ -6,6 +6,8 @@ import Users                                       from './user/pages/Users'
 import NewPlace                                    from './places/pages/NewPlace'
 import MainHeader                                  from './shared/components/Nav/MainHeader'
 import UserPlaces                                  from './places/pages/UserPlaces'
+import UpdatePlace                                 from './places/pages/UpdatePlace';
+
 
 const App = () => {
   return (
@@ -21,6 +23,9 @@ const App = () => {
         </Route>
         <Route path="/places/new" exact>       
           <NewPlace/>
+        </Route>
+        <Route path="/places/:placeId">
+          <UpdatePlace />
         </Route>
 
         <Redirect to="/" />
