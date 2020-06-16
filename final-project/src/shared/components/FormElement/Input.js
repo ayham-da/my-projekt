@@ -1,7 +1,7 @@
 import React, { useReducer, useEffect } from 'react';
 
 import Form from 'react-bootstrap/Form'
-import Col from 'react-bootstrap/Col'
+// import Col from 'react-bootstrap/Col'
 
 import { validate } from '../../util/validators';
 import './Input.css';
@@ -64,7 +64,7 @@ const Input = props => {
         value={inputState.value}
       />
     ) : (
-        <Form.Control  
+        <Form.Control 
         as="textarea"
         id={props.id}
         rows={props.rows || 3}
@@ -80,8 +80,8 @@ const Input = props => {
           'form-control--invalid'}`}>
             {props.label}
       </Form.Label>
-      <div className={`${!inputState.isValid && inputState.isTouched &&
-          'form-contrdsol--invalid'}`}>
+      <div className={` ${!inputState.isValid && inputState.isTouched &&
+          'form-control--invalid'}`}>
       {element}
       {!inputState.isValid && inputState.isTouched && <p>{props.errorText}</p>}
       </div>

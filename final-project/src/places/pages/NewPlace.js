@@ -1,4 +1,4 @@
-import React ,{useState}                    from 'react';
+import React                   from 'react';
 
 import Input from '../../shared/components/FormElement/Input';
 import {
@@ -8,7 +8,7 @@ import {
   import { useForm } from '../../shared/hooks/FormHook';
 
 import Form from 'react-bootstrap/Form'
-import Col from 'react-bootstrap/Col'
+// import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 
 
@@ -73,9 +73,11 @@ const NewPlace = () => {
                     />
 
                     <Form.File
+                        id="imageUrl"
                         text="light"
-                        id="exampleFormControlFile1"
                         label="Add photo" 
+                        validators={[VALIDATOR_REQUIRE()]}
+                        onInput={inputHandler}
                     />
                     <br />
                     <Button type="submit" disabled={!formState.isValid}>

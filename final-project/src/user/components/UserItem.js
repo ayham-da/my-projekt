@@ -1,7 +1,7 @@
 
 import React                     from 'react';
 import { Link }                  from 'react-router-dom'
-import {Card, Button,Nav }           from 'react-bootstrap'
+import {Card, Button }           from 'react-bootstrap'
 import                                'bootstrap/dist/css/bootstrap.min.css';
 
 import Avatar                    from '../../shared/components/UIElements/Avatar'

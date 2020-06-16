@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link }                  from 'react-router-dom'
+// import { Link }                  from 'react-router-dom'
 
 
 import Logo         from '../../../images/logo192.png'
@@ -26,7 +26,7 @@ const MainHeader = props => {
             <Nav.Link className="text-light" href="/All-places">All places</Nav.Link>
             <Nav.Link className="text-light" href="/All-Users">All Users</Nav.Link>
             <NavDropdown className="text-light" title="More" id="basic-nav-dropdown" >
-              <NavDropdown.Item className="bg-dark text-light" href="/auth">Authenticate</NavDropdown.Item>
+              <NavDropdown.Item className="bg-dark text-light" href="/auth">Login</NavDropdown.Item>
               <NavDropdown.Item className="bg-dark text-light" href="#action/3.2">About us</NavDropdown.Item>
               <NavDropdown.Item className="bg-dark text-light" href="#action/3.3">Contact</NavDropdown.Item>
               <NavDropdown.Divider />

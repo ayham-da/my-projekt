@@ -3,8 +3,8 @@ import React , {useState}            from 'react';
 import Modal                         from 'react-bootstrap/Modal'
 import Map from '../../shared/components/UIElements/Map';
 
-import { Link }                      from 'react-router-dom'
-import {Card, Button,Nav }           from 'react-bootstrap'
+// import { Link }                      from 'react-router-dom'
+import { Button }           from 'react-bootstrap'
 import                                    'bootstrap/dist/css/bootstrap.min.css';
 
 import                                    './PlaceItem.css'
