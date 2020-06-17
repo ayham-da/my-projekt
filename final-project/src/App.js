@@ -7,7 +7,8 @@ import NewPlace                                    from './places/pages/NewPlace
 import MainHeader                                  from './shared/components/Nav/MainHeader'
 import UserPlaces                                  from './places/pages/UserPlaces'
 import UpdatePlace                                 from './places/pages/UpdatePlace';
-
+import HomePage                                    from './Home/pages/HomePage';
+import AllPlaces                                   from './places/pages/AllPlaces';
 
 const App = () => {
   return (
@@ -16,7 +17,13 @@ const App = () => {
     <MainHeader/>
       <Switch>
         <Route path="/" exact>
+          <HomePage/>
+        </Route>
+        <Route path="/All-Users" exact>
           <Users/>
+        </Route>
+        <Route path="/All-places" exact>
+          <AllPlaces/>
         </Route>
         <Route path="/:userId/places" exact>
           <UserPlaces/>
