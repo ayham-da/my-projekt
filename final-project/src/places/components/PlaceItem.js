@@ -12,10 +12,27 @@ import                                    './PlaceItem.css'
 
 const PlaceItem = props => {
   const [showMap, setShowMap] = useState(false);
+  const [showConfirmModal, setShowConfirmModal] = useState(false);
+
 
   const openMapHandler = () => setShowMap(true);
 
   const closeMapHandler = () => setShowMap(false);
+
+  const showDeleteWarningHandler = () => {
+    setShowConfirmModal(true);
+  };
+
+  const cancelDeleteHandler = () => {
+    setShowConfirmModal(false);
+  };
+
+  const confirmDeleteHandler = () => {
+    setShowConfirmModal(false);
+    console.log('DELETING...');
+  };
+
+
 
     return(
     <React.Fragment>
@@ -34,7 +51,7 @@ const PlaceItem = props => {
             <Link to={`/places/${props.id}`}>
             <Button variant="info">EDIT</Button>
             </Link>
-            <Button variant="danger">DELETE</Button>
+            <Button variant="danger" onClick={showDeleteWarningHandler}>DELETE</Button>
             
           <Modal show={showMap}  onHide={closeMapHandler}>
             <Modal.Header className="modal-header"  closeButton>
@@ -56,6 +73,28 @@ const PlaceItem = props => {
               </Button>
               <Button variant="success" onClick={closeMapHandler}>
                 Open in Google Map
+              </Button>
+            </Modal.Footer>
+          </Modal>
+
+          <Modal show={showConfirmModal}  onHide={cancelDeleteHandler} className="delete-modal">
+            <Modal.Header className="modal-header"  closeButton>
+              <Modal.Title>
+                <h2>Are you sure?</h2>
+                </Modal.Title>
+            </Modal.Header>
+            <Modal.Body className="modal-body">
+              <p>
+                Do you want to proceed and delete this place? Please note that it
+                can't be undone thereafter.
+              </p>
+            </Modal.Body>
+            <Modal.Footer className="modal-footer">
+              <Button variant="secondary" onClick={cancelDeleteHandler}>
+              CANCEL
+              </Button>
+              <Button variant="danger" onClick={confirmDeleteHandler}>
+                Delete
               </Button>
             </Modal.Footer>
           </Modal>

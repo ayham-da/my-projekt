@@ -80,5 +80,14 @@
     background: #333333;
     color: white;
     border: black 1px solid;
+    margin-bottom: .15rem;
+  }
+  .modal-footer{
+    background: #333333;
+    color: white;
+    border: black 1px solid;
 
+  }
+  .delete-modal{
+    margin-top: 10rem;
   }

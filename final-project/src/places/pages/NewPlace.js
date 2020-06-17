@@ -79,11 +79,11 @@ const NewPlace = () => {
                         id="imageUrl"
                         text="light"
                         label="Add photo" 
-                        validators={[VALIDATOR_REQUIRE()]}
+                        // validators={[VALIDATOR_REQUIRE()]}
                         onInput={inputHandler}
                     />
                     <br />
-                    <Button type="submit" disabled={!formState.isValid}>
+                    <Button type="submit" >
                         ADD PLACE
                     </Button>
                 
