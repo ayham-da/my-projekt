@@ -9,6 +9,9 @@ import UserPlaces                                  from './places/pages/UserPlac
 import UpdatePlace                                 from './places/pages/UpdatePlace';
 import HomePage                                    from './Home/pages/HomePage';
 import AllPlaces                                   from './places/pages/AllPlaces';
+import Contact                                     from './Home/pages/Contact';
+import AboutUs                                     from './Home/pages/AboutUs';
+
 
 const App = () => {
   return (
@@ -24,6 +27,12 @@ const App = () => {
         </Route>
         <Route path="/All-places" exact>
           <AllPlaces/>
+        </Route>
+        <Route path="/Contact" exact>
+          <Contact/>
+        </Route>
+        <Route path="/AboutUs" exact>
+          <AboutUs/>
         </Route>
         <Route path="/:userId/places" exact>
           <UserPlaces/>
