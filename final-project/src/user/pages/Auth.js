@@ -18,7 +18,7 @@ import Card                  from 'react-bootstrap/Card'
 import './Auth.css'
 
 const Auth = () => {
-    const [formState, inputHandler, setFormData] = useForm(
+    const [formState, inputHandler] = useForm(
         {
           email: {
             value: '',
