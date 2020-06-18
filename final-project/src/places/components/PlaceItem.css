@@ -58,10 +58,11 @@
     width: 100%;
   }
 
-  .map-container{
-    margin: 1rem;
+  div .map-container{
+    margin: .01rem;
     height: 20rem;
     width: auto;
+    border: solid .2rem #333333;
   }
   
   @media (min-width: 768px) {
@@ -84,7 +85,7 @@
     background: #333333;
     color: white;
     border: black 1px solid;
-    margin-bottom: .15rem;
+    
   }
   .modal-footer{
     background: #333333;

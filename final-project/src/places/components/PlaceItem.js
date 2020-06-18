@@ -64,16 +64,21 @@ const PlaceItem = props => {
             </Modal.Body>
 
             <div className="map-container">
-              <Map center={props.coordinates} zoom={16}/>
+              <Map center={props.coordinats} zoom={16}/>
             </div>
 
             <Modal.Footer>
               <Button variant="secondary" onClick={closeMapHandler}>
                 Close
               </Button>
-              <Button variant="success" onClick={closeMapHandler}>
+              
+              <Button variant="success" onClick={closeMapHandler} target="_blank"
+              href={`https://www.google.com/maps/place/${props.title}/@${props.lat},${props.lng}` }
+              
+              >
                 Open in Google Map
               </Button>
+              
             </Modal.Footer>
           </Modal>
 

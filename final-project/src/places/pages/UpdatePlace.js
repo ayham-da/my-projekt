@@ -22,25 +22,25 @@ import './PlaceForm.css'
 const Fake_PLACES = [
     {
       id: 'p1',
-      title: 'Volksgarten , Düsseldorf',
+      title: 'Volksgarten',
       description: 'One of the most famous garden in Düsseldorf!',
       imageUrl: Image ,
       address: '40225 Düsseldorf',
       location: {
-        lat: 51.2062312,
-        lng: 6.7967774
+        lat: 51.2068834,
+        lng: 6.7952643
       },
       creator: 'u1'
     },
     {
       id: 'p2',
-      title: 'Volksgarten , Düsseldorf',
+      title: 'Volksgarten',
       description: 'One of the most famous garden in Düsseldorf!',
       imageUrl: Image ,
       address: '40225 Düsseldorf',
       location: {
-        lat: 51.2062312,
-        lng: 6.7967774
+        lat: 51.2068834,
+        lng: 6.7952643
       },
       creator: 'u2'
     }

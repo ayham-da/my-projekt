@@ -8,3 +8,6 @@
     border-color: red;
     background: #ffd1d1;
   }
+  label{
+    max-width: 40.666667% !important;
+  }
