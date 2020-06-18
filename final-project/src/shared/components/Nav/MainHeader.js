@@ -29,8 +29,8 @@ const MainHeader = props => {
               <NavDropdown.Item className="bg-dark text-light" href="/auth">Login</NavDropdown.Item>
               <NavDropdown.Item className="bg-dark text-light" href="/AboutUs">About us</NavDropdown.Item>
               <NavDropdown.Item className="bg-dark text-light" href="/Contact">Contact</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item className="bg-dark text-light" href="#action/3.4">Separated link</NavDropdown.Item>
+              {/* <NavDropdown.Divider />
+              <NavDropdown.Item className="bg-dark text-light" href="#action/3.4">Separated link</NavDropdown.Item> */}
             </NavDropdown>
           </Nav>
           <Form inline>

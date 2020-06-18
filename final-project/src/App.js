@@ -11,7 +11,7 @@ import HomePage                                    from './Home/pages/HomePage';
 import AllPlaces                                   from './places/pages/AllPlaces';
 import Contact                                     from './Home/pages/Contact';
 import AboutUs                                     from './Home/pages/AboutUs';
-
+import Auth                                        from './user/pages/Auth'
 
 const App = () => {
   return (
@@ -27,6 +27,9 @@ const App = () => {
         </Route>
         <Route path="/All-places" exact>
           <AllPlaces/>
+        </Route>
+        <Route path="/auth" exact>
+          <Auth/>
         </Route>
         <Route path="/Contact" exact>
           <Contact/>

@@ -4,3 +4,12 @@
 .dropdown-toggle {
     color: white;
 }
+
+/* .text-light {
+    background-color: #cfc7c7 !important;
+
+} */
+.dropdown-menu {
+    background-color: #cfc7c7 !important;
+
+}
