@@ -73,8 +73,7 @@ const PlaceItem = props => {
               </Button>
               
               <Button variant="success" onClick={closeMapHandler} target="_blank"
-              href={`https://www.google.com/maps/place/${props.title}/@${props.lat},${props.lng}` }
-              
+                href={`https://www.google.com/maps/place/${props.title}/@${props.lat},${props.lng},16z` }
               >
                 Open in Google Map
               </Button>
