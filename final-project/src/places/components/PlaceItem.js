@@ -1,8 +1,8 @@
-import React , {useState}            from 'react';
+import React ,{useState,useContext} from 'react';
 
 import Modal                         from 'react-bootstrap/Modal'
 import Map                           from '../../shared/components/UIElements/Map';
-
+import { AuthContext }               from '../../shared/components/Context/auth-Context'        
 import { Link }                      from 'react-router-dom';
 import {Card,Button}                 from 'react-bootstrap'
 import                                    'bootstrap/dist/css/bootstrap.min.css';
@@ -11,6 +11,8 @@ import                                    './PlaceItem.css'
 
 
 const PlaceItem = props => {
+  const auth = useContext(AuthContext);
+
   const [showMap, setShowMap] = useState(false);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
 
@@ -48,10 +50,12 @@ const PlaceItem = props => {
           </Card.Body>
           <div className="place-item__actions">
             <Button variant="success" onClick={openMapHandler}>VIEW ON MAP</Button>
+            {auth.isLoggedIn && (
             <Link to={`/places/${props.id}`}>
             <Button variant="info">EDIT</Button>
-            </Link>
-            <Button variant="danger" onClick={showDeleteWarningHandler}>DELETE</Button>
+            </Link>)}
+            {auth.isLoggedIn && (
+            <Button variant="danger" onClick={showDeleteWarningHandler}>DELETE</Button>)}
             
           <Modal show={showMap}  onHide={closeMapHandler}>
             <Modal.Header className="modal-header"  closeButton>

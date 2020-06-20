@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 // import { Link }                  from 'react-router-dom'
 
+import { AuthContext } from '../Context/auth-Context';
 
 import Logo         from '../../../images/logo192.png'
 
@@ -10,6 +11,8 @@ import                                'bootstrap/dist/css/bootstrap.min.css';
 import './MainHeader.css';
 
 const MainHeader = props => {
+  const auth = useContext(AuthContext);
+
   return (
       <>
       <Navbar bg="dark" expand="lg" sticky="top" className="mb-3 ">
@@ -21,16 +24,23 @@ const MainHeader = props => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto ">
-            <Nav.Link className="text-light" href="/places/new">Add places</Nav.Link>
-            <Nav.Link className="text-light" href={`/u1/places`}>My places</Nav.Link>
+          {auth.isLoggedIn && (
+            <Nav.Link className="text-light" href="/places/new">Add places</Nav.Link>)}
+          {auth.isLoggedIn && (
+            <Nav.Link className="text-light" href={`/u1/places`}>My places</Nav.Link>)}
             <Nav.Link className="text-light" href="/All-places">All places</Nav.Link>
             <Nav.Link className="text-light" href="/All-Users">All Users</Nav.Link>
             <NavDropdown className="text-light" title="More" id="basic-nav-dropdown" >
-              <NavDropdown.Item className="bg-dark text-light" href="/auth">Login</NavDropdown.Item>
+            {!auth.isLoggedIn && (
+              <NavDropdown.Item className="bg-dark text-light" href="/auth">Login</NavDropdown.Item>)}
               <NavDropdown.Item className="bg-dark text-light" href="/AboutUs">About us</NavDropdown.Item>
               <NavDropdown.Item className="bg-dark text-light" href="/Contact">Contact</NavDropdown.Item>
-              {/* <NavDropdown.Divider />
-              <NavDropdown.Item className="bg-dark text-light" href="#action/3.4">Separated link</NavDropdown.Item> */}
+              {auth.isLoggedIn && (<NavDropdown.Divider />)}
+               {auth.isLoggedIn && (
+              <NavDropdown.Item onClick={auth.logout} className="bg-dark text-light" href="#action/3.4">
+                  logout              
+              </NavDropdown.Item>
+              )}
             </NavDropdown>
           </Nav>
           <Form inline>
