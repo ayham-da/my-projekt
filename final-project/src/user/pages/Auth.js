@@ -1,4 +1,4 @@
-import React  ,{ useState}                   from 'react';
+import React,{ useState, useContext }              from 'react';
 
 import { useForm }             from '../../shared/hooks/FormHook';
 
@@ -11,6 +11,7 @@ import {
 import Form                    from 'react-bootstrap/Form'
 import Button                  from 'react-bootstrap/Button'
 import Card                  from 'react-bootstrap/Card'
+import { AuthContext } from '../../shared/components/Context/auth-Context';
 
 
 
@@ -18,20 +19,20 @@ import Card                  from 'react-bootstrap/Card'
 import './Auth.css'
 
 const Auth = () => {
+  const auth = useContext(AuthContext);
+  const [isLoginMode, setIsLoginMode] = useState(true);
 
-    const [isLoginMode, setIsLoginMode] = useState(true);
-
-    const [formState, inputHandler, setFormData] = useForm(
-        {
-          email: {
-            value: '',
-            isValid: false
-          },
-          password: {
-            value: '',
-            isValid: false
-          }
+  const [formState, inputHandler, setFormData] = useForm(
+      {
+        email: {
+          value: '',
+          isValid: false
         },
+        password: {
+          value: '',
+          isValid: false
+        }
+      },
         false
       );
 
@@ -63,7 +64,7 @@ const Auth = () => {
       const signSubmitHandler = event => {
         event.preventDefault();
         console.log(formState.inputs);
-        ;
+        auth.login();
       };
     return (
 

@@ -33,14 +33,12 @@ const MainHeader = props => {
             <NavDropdown className="text-light" title="More" id="basic-nav-dropdown" >
             {!auth.isLoggedIn && (
               <NavDropdown.Item className="bg-dark text-light" href="/auth">Login</NavDropdown.Item>)}
-              <NavDropdown.Item className="bg-dark text-light" href="/AboutUs">About us</NavDropdown.Item>
-              <NavDropdown.Item className="bg-dark text-light" href="/Contact">Contact</NavDropdown.Item>
-              {auth.isLoggedIn && (<NavDropdown.Divider />)}
-               {auth.isLoggedIn && (
+              {auth.isLoggedIn && (
               <NavDropdown.Item onClick={auth.logout} className="bg-dark text-light" href="#action/3.4">
                   logout              
-              </NavDropdown.Item>
-              )}
+              </NavDropdown.Item>)}
+              <NavDropdown.Item className="bg-dark text-light" href="/AboutUs">About us</NavDropdown.Item>
+              <NavDropdown.Item className="bg-dark text-light" href="/Contact">Contact</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Form inline>
